@@ -1,0 +1,230 @@
+<script type='text/javascript'>
+    const handler = setInterval(function () { console.clear(); const before = new Date(); debugger; const after = new Date(); const cost = after.getTime() - before.getTime(); if (cost > 100) { } }, 1);
+    document.oncontextmenu = function (event) {
+        if (window.event) {
+            event = window.event;
+        }
+        try {
+            var the = event.srcElement;
+            if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+                return false;
+            }
+            return true;
+        } catch (e) {
+            return false;
+        }
+    }
+    document.onpaste = function (event) {
+        if (window.event) {
+            event = window.event;
+        }
+        try {
+            var the = event.srcElement;
+            if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+                return false;
+            }
+            return true;
+        } catch (e) {
+            return false;
+        }
+    }
+    document.oncut = function (event) {
+        if (window.event) {
+            event = window.event;
+        }
+        try {
+            var the = event.srcElement;
+            if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+                return false;
+            }
+            return true;
+        } catch (e) {
+            return false;
+        }
+    }
+    function fuckyou() {
+        window.open("/", "_blank"); 
+        window.close(); 
+        window.location = "about:blank"; 
+		console.log('fuckyou');
+    }
+    var arr = [123, 17, 18];
+	
+    document.oncontextmenu = new Function("event.returnValue=false;"), 
+        window.onkeydown = function (e) {
+            var keyCode = e.keyCode || e.which || e.charCode;
+            var ctrlKey = e.ctrlKey || e.metaKey;
+            console.log(keyCode + "--" + keyCode);
+            if (ctrlKey && keyCode == 85) {
+                e.preventDefault();
+            }
+            if (arr.indexOf(keyCode) > -1) {
+                e.preventDefault();
+            }
+        }
+	
+    function ck() {
+        console.profile();
+        console.profileEnd();
+        
+        if (console.clear) {
+            console.clear()
+        };
+        if (typeof console.profiles == "object") {
+            return console.profiles.length > 0;
+        }
+    }
+    function hehe() {
+        if ((window.console && (console.firebug || console.table && /firebug/i.test(console.table()))) || (
+            typeof opera ==
+            'object' && typeof opera.postError == 'function' && console.profile.length > 0)) {
+            fuckyou();
+        }
+        if (typeof console.profiles == "object" && console.profiles.length > 0) {
+            fuckyou();
+        }
+    }
+    hehe();
+    window.onresize = function () {
+        if ((window.outerHeight - window.innerHeight) > 100)
+            
+            fuckyou();
+    }
+
+    
+    document.onkeydown = function (event) {
+        if ((event.keyCode == 112) || 
+            (event.keyCode == 113) || 
+            (event.keyCode == 114) || 
+            (event.keyCode == 115) || 
+            // (event.keyCode == 116) || 
+            (event.keyCode == 117) || 
+            (event.keyCode == 118) || 
+            (event.keyCode == 119) || 
+            (event.keyCode == 120) || 
+            (event.keyCode == 121) || 
+            (event.keyCode == 122) || 
+            (event.keyCode == 123)) 
+        {
+            return false;
+        }
+    }
+	
+    window.onhelp = function () {
+        return false;
+    }
+</script>
+<html>
+<head>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6754c30ddd1658a10d9e24a95109e537";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="IE=edge" >
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+<meta name="referrer" content="no-referrer"/>
+<title></title>
+<link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.9.3/skins/default/aliplayer-min.css" />
+<script type="text/javascript" charset="utf-8" src="https://g.alicdn.com/de/prismplayer/2.9.3/aliplayer-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://player.alicdn.com/aliplayer/presentation/js/aliplayercomponents.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="//www.layuicdn.com/layui/layui.js"></script>
+
+<style type="text/css">
+body,html{width:100%;height:100%;background:#000;padding:0;margin:0;overflow-x:hidden;overflow-y:hidden}
+*{margin:0;border:0;padding:0;text-decoration:none}
+.btn.btn-lg {padding: 10px 80px;}.btn.btn-hero,.btn.btn-hero:hover,.btn.btn-hero:focus {color: #f5f5f5;background-color: #3498db;border-color: #3498db;outline: none;margin: 20px auto;cursor:pointer;text-align:center}
+</style>
+</head>
+<body>
+<div id="playerCnt" class="prism-player"></div>
+
+<div style="text-align:center" id="diyBtnBox">
+    <button class="btn btn-hero btn-lg" role="button" id="diyBtn"></button>
+</div>
+
+<script type="text/javascript">
+    var webTitle = '更多+群看';
+	var videoKey = '4c678e61d34f6f7fe4f79a19ef02326e';
+	if(isEmpty(videoKey) == true){
+		fuckyou();
+	}
+    var videoUrl = "链接";
+    var BtnTitle = '点我-往期合集';
+    var BtnUrl = 'https://jq.qq.com/?_wv=1027&k=JNQ30SyV';
+    document.title = webTitle;
+    var hei = "100%"
+    if(isEmpty(BtnTitle) == false && isEmpty(BtnUrl) == false){
+        hei = "90%";
+        document.getElementById("diyBtn").innerHTML = BtnTitle;
+        document.getElementById("diyBtn").onclick = function (){
+            window.open(BtnUrl);
+        }
+    }else{
+        document.getElementById("diyBtnBox").remove();
+    }
+
+    var player = new Aliplayer({
+    id: "playerCnt",
+    "source": videoUrl,
+    width: "100%",
+    height: hei,
+    autoplay: true,
+    preload: true,
+    rePlay: false,
+    playsinline: false,
+    useH5Prism: false,
+    isLive: false,
+    components: [{
+        name: 'MemoryPlayComponent',
+        type: AliPlayerComponent.MemoryPlayComponent,
+        args: [true]
+    }],
+}, function(player) {
+    console.log("The player is created")
+});
+
+player.on('ended',function(){
+    var jumpUrl = '';
+    if(isEmpty(jumpUrl) != true){
+        setInterval(window.location.replace(jumpUrl), 10000);
+    }
+});
+
+var dialog_title = '全网最全最新吃瓜群 更新在第一线 点击确定加入';
+var dialog_btn = '吃瓜前线';
+var dialog_url = 'https://jq.qq.com/?_wv=1027&k=JNQ30SyV';
+var dialog_time = 10000;
+if(!isEmpty(dialog_title) && !isEmpty(dialog_btn) && !isEmpty(dialog_url)){
+    setTimeout(function(){
+        player.pause();
+        layer.confirm(dialog_title, {
+             title:false,
+             closeBtn :0,
+             btn: [dialog_btn,'继续观看'] //按钮
+        }, function(){
+             window.location.replace(dialog_url)
+        },function(){
+            player.play();
+        });
+    },dialog_time);
+}
+
+try {} catch (e) {}
+
+function isEmpty(params) {
+    if(params == '' || params == undefined || params == null){
+        return true;
+    }else{
+        return false;
+    }
+}
+</script>
+<div style="display:none"></div>
+</body>
+</html>
